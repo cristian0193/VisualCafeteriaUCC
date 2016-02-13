@@ -33,6 +33,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Control">
+      <HintPath>..\Control\bin\Debug\Control.dll</HintPath>
+    </Reference>
+    <Reference Include="Dao">
+      <HintPath>..\Dao\bin\Debug\Dao.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
