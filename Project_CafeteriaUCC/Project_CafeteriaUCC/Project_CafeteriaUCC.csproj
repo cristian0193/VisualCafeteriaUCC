@@ -52,16 +52,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormularioEmpleado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioEmpleado.Designer.cs">
+      <DependentUpon>FormularioEmpleado.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormularioLogin.Designer.cs">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioAdministrador.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioAdministrador.Designer.cs">
+      <DependentUpon>FormularioAdministrador.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormularioEmpleado.resx">
+      <DependentUpon>FormularioEmpleado.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioLogin.resx">
       <DependentUpon>FormularioLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioAdministrador.resx">
+      <DependentUpon>FormularioAdministrador.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

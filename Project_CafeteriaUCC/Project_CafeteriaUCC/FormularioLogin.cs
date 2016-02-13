@@ -20,14 +20,48 @@ namespace Project_CafeteriaUCC
 
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
-            if (ctrlUsuario.insert(Convert.ToInt32(this.txt_usuario.Text), Convert.ToString(this.txt_contrasena.Text),"","","","","","","") > 0)
+
+            int usuario = Convert.ToInt32(this.txt_usuario.Text);
+            string password = Convert.ToString(this.txt_contrasena.Text);
+
+
+            if (usuario.Equals("") || password.Equals(""))
             {
-                MessageBox.Show("Datos Guardados con Exito");
+                MessageBox.Show("INGRESE USUARIO O CONTRASEÑA");
             }
-            else
+             else
             {
-                MessageBox.Show("Error al Guardar los Datos:");
+                if (ctrlLogin.consultaSQLUsuarios(usuario, password) > 0)
+                {
+
+                    if (ctrlLogin.consultaSQLRoles(usuario, password).Equals("ADMINISTRADOR"))
+                    {
+                        FormularioAdministrador frmMenu = new FormularioAdministrador();
+                        frmMenu.Show();
+
+                        FormularioLogin frmLogin = new FormularioLogin();
+                        frmLogin.Visible = false;
+                        
+                    }
+                    else if (ctrlLogin.consultaSQLRoles(usuario, password).Equals("EMPLEADO"))
+                    {
+                        FormularioEmpleado frmMenu = new FormularioEmpleado();
+                        frmMenu.Show();
+
+                        FormularioLogin frmLogin = new FormularioLogin();
+                        frmLogin.Visible = false;
+                    }
+
+
+                }
+                else
+                {
+                    MessageBox.Show("USUARIO NO EXISTE EN BASE DE DATOS:");
+                }
             }
+
+
+           
         }
     }
 }
