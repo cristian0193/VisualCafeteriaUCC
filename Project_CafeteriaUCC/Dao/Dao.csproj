@@ -48,8 +48,10 @@
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="crudLogin.cs" />
+    <Compile Include="crudProductos.cs" />
     <Compile Include="crudUsuarios.cs" />
     <Compile Include="daoLogin.cs" />
+    <Compile Include="daoProductos.cs" />
     <Compile Include="daoUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Settings.Designer.cs">

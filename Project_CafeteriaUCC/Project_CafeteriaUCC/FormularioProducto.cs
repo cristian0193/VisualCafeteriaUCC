@@ -10,17 +10,11 @@ using System.Windows.Forms;
 
 namespace Project_CafeteriaUCC
 {
-    public partial class FormularioAdministrador : Form
+    public partial class FormularioProducto : Form
     {
-        public FormularioAdministrador()
+        public FormularioProducto()
         {
             InitializeComponent();
-        }
-
-        private void vENTAToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            FormularioVenta venta = new FormularioVenta();
-            venta.Show();
         }
     }
 }

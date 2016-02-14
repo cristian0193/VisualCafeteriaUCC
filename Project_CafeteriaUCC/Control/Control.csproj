@@ -44,6 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ctrlLogin.cs" />
+    <Compile Include="ctrlCantidad.cs" />
     <Compile Include="ctrlUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

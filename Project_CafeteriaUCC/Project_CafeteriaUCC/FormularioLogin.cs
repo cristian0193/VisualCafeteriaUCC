@@ -51,8 +51,6 @@ namespace Project_CafeteriaUCC
                         FormularioLogin frmLogin = new FormularioLogin();
                         frmLogin.Visible = false;
                     }
-
-
                 }
                 else
                 {

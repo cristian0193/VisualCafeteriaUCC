@@ -70,6 +70,18 @@
     <Compile Include="FormularioAdministrador.Designer.cs">
       <DependentUpon>FormularioAdministrador.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioProducto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioProducto.Designer.cs">
+      <DependentUpon>FormularioProducto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormularioVenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioVenta.Designer.cs">
+      <DependentUpon>FormularioVenta.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormularioEmpleado.resx">
@@ -80,6 +92,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioAdministrador.resx">
       <DependentUpon>FormularioAdministrador.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioProducto.resx">
+      <DependentUpon>FormularioProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioVenta.resx">
+      <DependentUpon>FormularioVenta.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

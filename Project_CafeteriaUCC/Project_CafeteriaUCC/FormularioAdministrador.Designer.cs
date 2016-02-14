@@ -35,6 +35,7 @@
             this.eMPRESAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pAGOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fACTURAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -80,7 +81,8 @@
             // pAGOToolStripMenuItem
             // 
             this.pAGOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fACTURAToolStripMenuItem});
+            this.fACTURAToolStripMenuItem,
+            this.vENTAToolStripMenuItem});
             this.pAGOToolStripMenuItem.Name = "pAGOToolStripMenuItem";
             this.pAGOToolStripMenuItem.Size = new System.Drawing.Size(51, 20);
             this.pAGOToolStripMenuItem.Text = "PAGO";
@@ -88,17 +90,24 @@
             // fACTURAToolStripMenuItem
             // 
             this.fACTURAToolStripMenuItem.Name = "fACTURAToolStripMenuItem";
-            this.fACTURAToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+            this.fACTURAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fACTURAToolStripMenuItem.Text = "FACTURA";
             // 
-            // FormularioMenuAdministrador
+            // vENTAToolStripMenuItem
+            // 
+            this.vENTAToolStripMenuItem.Name = "vENTAToolStripMenuItem";
+            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vENTAToolStripMenuItem.Text = "VENTA";
+            this.vENTAToolStripMenuItem.Click += new System.EventHandler(this.vENTAToolStripMenuItem_Click);
+            // 
+            // FormularioAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(753, 261);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "FormularioMenuAdministrador";
+            this.Name = "FormularioAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
             this.menuStrip1.ResumeLayout(false);
@@ -117,5 +126,6 @@
         private System.Windows.Forms.ToolStripMenuItem eMPRESAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pAGOToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fACTURAToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vENTAToolStripMenuItem;
     }
 }
