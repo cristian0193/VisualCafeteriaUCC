@@ -21,7 +21,7 @@ namespace Dao
             {
                 if (true)
                 {
-                    string sql = "INSERT INTO[dbo].[VENTA] values ("+ fecha+ ","+ numero_identificacion + "," + id_producto + ", '" + nombre_producto + "' ," + precio + "," + cantidad + ",'" + subtotal + "','" + iva + "','" + total + "')";
+                    string sql = "INSERT INTO[dbo].[VENTA] ([FECHA],[NUMERO_DOCUMENTO],[ID_PRODUCTO],[NOMBRE_PRODUCTO],[PRECIO] ,[CANTIDAD],[SUBTOTAL],[IVA],[TOTAL]) VALUES(" +fecha+","+ numero_identificacion+","+ id_producto + ",'" + nombre_producto + "',"+precio+","+cantidad+",'"+subtotal+"','"+iva+"','"+total+"')";                    
                     return conexion.ExecuteStatementNoneReturnRows(sql);
                 }
                 else
