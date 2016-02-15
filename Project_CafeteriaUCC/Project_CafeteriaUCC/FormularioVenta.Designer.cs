@@ -37,6 +37,11 @@
             this.label2 = new System.Windows.Forms.Label();
             this.combo_producto = new System.Windows.Forms.ComboBox();
             this.grid_productos = new System.Windows.Forms.DataGridView();
+            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.txt_subtotal = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.txt_iva = new System.Windows.Forms.TextBox();
@@ -46,11 +51,6 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_imprimir = new System.Windows.Forms.Button();
-            this.CO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PROD = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CODIGO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PRECIO = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TOTAL = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_productos)).BeginInit();
@@ -109,7 +109,7 @@
             // 
             this.btn_registrar_producto.Location = new System.Drawing.Point(195, 61);
             this.btn_registrar_producto.Name = "btn_registrar_producto";
-            this.btn_registrar_producto.Size = new System.Drawing.Size(176, 21);
+            this.btn_registrar_producto.Size = new System.Drawing.Size(176, 23);
             this.btn_registrar_producto.TabIndex = 14;
             this.btn_registrar_producto.Text = "Registrar Producto";
             this.btn_registrar_producto.UseVisualStyleBackColor = true;
@@ -147,15 +147,45 @@
             // 
             this.grid_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.CO,
-            this.PROD,
             this.CODIGO,
+            this.PROD,
+            this.CO,
             this.PRECIO,
             this.TOTAL});
             this.grid_productos.Location = new System.Drawing.Point(257, 172);
             this.grid_productos.Name = "grid_productos";
             this.grid_productos.Size = new System.Drawing.Size(546, 212);
             this.grid_productos.TabIndex = 5;
+            // 
+            // CODIGO
+            // 
+            this.CODIGO.HeaderText = "Codigo";
+            this.CODIGO.Name = "CODIGO";
+            this.CODIGO.Width = 60;
+            // 
+            // PROD
+            // 
+            this.PROD.HeaderText = "Producto";
+            this.PROD.Name = "PROD";
+            this.PROD.Width = 180;
+            // 
+            // CO
+            // 
+            this.CO.HeaderText = "Cantidad";
+            this.CO.Name = "CO";
+            this.CO.Width = 60;
+            // 
+            // PRECIO
+            // 
+            this.PRECIO.HeaderText = "Precio";
+            this.PRECIO.MinimumWidth = 10;
+            this.PRECIO.Name = "PRECIO";
+            // 
+            // TOTAL
+            // 
+            this.TOTAL.HeaderText = "Total";
+            this.TOTAL.MinimumWidth = 10;
+            this.TOTAL.Name = "TOTAL";
             // 
             // txt_subtotal
             // 
@@ -242,35 +272,6 @@
             this.btn_imprimir.Text = "IMPRIMIR";
             this.btn_imprimir.UseVisualStyleBackColor = true;
             // 
-            // CO
-            // 
-            this.CO.HeaderText = "Cantidad";
-            this.CO.Name = "CO";
-            this.CO.Width = 50;
-            // 
-            // PROD
-            // 
-            this.PROD.HeaderText = "Producto";
-            this.PROD.Name = "PROD";
-            this.PROD.Width = 200;
-            // 
-            // CODIGO
-            // 
-            this.CODIGO.HeaderText = "Codigo";
-            this.CODIGO.Name = "CODIGO";
-            // 
-            // PRECIO
-            // 
-            this.PRECIO.HeaderText = "Precio";
-            this.PRECIO.MinimumWidth = 10;
-            this.PRECIO.Name = "PRECIO";
-            // 
-            // TOTAL
-            // 
-            this.TOTAL.HeaderText = "Total";
-            this.TOTAL.MinimumWidth = 10;
-            this.TOTAL.Name = "TOTAL";
-            // 
             // FormularioVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -323,8 +324,8 @@
         private System.Windows.Forms.Button btn_registrar_producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
-        private System.Windows.Forms.DataGridViewTextBoxColumn PROD;
         private System.Windows.Forms.DataGridViewTextBoxColumn CO;
+        private System.Windows.Forms.DataGridViewTextBoxColumn PROD;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
     }
 }

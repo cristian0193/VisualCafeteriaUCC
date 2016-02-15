@@ -48,9 +48,11 @@
   <ItemGroup>
     <Compile Include="ConexionBD.cs" />
     <Compile Include="crudLogin.cs" />
+    <Compile Include="crudVenta.cs" />
     <Compile Include="crudProductos.cs" />
     <Compile Include="crudUsuarios.cs" />
     <Compile Include="daoLogin.cs" />
+    <Compile Include="daoVenta.cs" />
     <Compile Include="daoProductos.cs" />
     <Compile Include="daoUsuario.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

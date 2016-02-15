@@ -97,15 +97,18 @@ namespace Project_CafeteriaUCC
             string nombre_producto = "";
             string precio = "";
             string cantidad = "";
-            string subtotal = "";
-            string iva = "";
-            string total = "";
+            double subtotal = 0.0;
+            double iva = 0.0;
+            double total = 0.0;
+            string fecha = "GETDATE()";
+            int productosComprados = 0;
 
 
             string cedula = Interaction.InputBox("Ingrese Cedular del Cliente para Verificar si se encuentra en la Base de Datos", "Verificacion de Cliente", "");
 
 
             daoUsuario usuario = new daoUsuario();
+            daoVenta venta = new daoVenta();
             DataTable verificacion_usuario = new DataTable();
             verificacion_usuario = usuario.ConsultaVerificacionUsuario(cedula);
 
@@ -115,34 +118,24 @@ namespace Project_CafeteriaUCC
                 nombre = Convert.ToString((verificacion_usuario.Rows[0]["NOMBRES"].ToString()));
                 apellido = Convert.ToString((verificacion_usuario.Rows[0]["APELLIDOS"].ToString()));
 
-                subtotal = Convert.ToString(txt_subtotal.Text);
-                iva = Convert.ToString(txt_iva.Text);
-                total = Convert.ToString(txt_total.Text);
+                subtotal = Convert.ToDouble(txt_subtotal.Text);
+                iva = Convert.ToDouble(txt_iva.Text);
+                total = Convert.ToDouble(txt_total.Text);
 
                 foreach (DataGridViewRow row in grid_productos.Rows)
                 {
-                    id_product = Convert.ToString(row.Cells["TOTAL"].Value);
-                    nombre_producto = Convert.ToString(row.Cells["TOTAL"].Value);
-                    precio = Convert.ToString(row.Cells["TOTAL"].Value);
-                    cantidad = Convert.ToString(row.Cells["TOTAL"].Value);
+                    id_product = Convert.ToString(row.Cells["CODIGO"].Value);
+                    nombre_producto = Convert.ToString(row.Cells["PROD"].Value);
+                    precio = Convert.ToString(row.Cells["PRECIO"].Value);
+                    cantidad = Convert.ToString(row.Cells["CO"].Value);
 
+
+                    productosComprados += venta.insertVenta(fecha, identifica, id_product, nombre_producto, precio, cantidad, subtotal, iva, total);
 
                 }
 
-
-
-
-
-
-
-
-
-
-                string mensaje = string.Format(" MUCHAS GRACIAS POR SU COMPRA{0} Identificacion : {1}{0}Nombre : {2}{0}Apellido : {3}", Environment.NewLine, identifica, nombre, apellido);
+                string mensaje = string.Format("MUCHAS GRACIAS POR SU COMPRA{0} Identificacion : {1}{0}Nombre : {2}{0}Apellido : {3}{0}Prodcutos Comprados : {4} ", Environment.NewLine, identifica, nombre, apellido, productosComprados);
                 MessageBox.Show(mensaje);
-
-
-
 
             }
             else

@@ -159,6 +159,13 @@ namespace Dao
             return dt;
         }
 
+        //public DataTable InsertarVenta(string fecha, string numero_documento,string id_producto, string nombre_producto, string precio, string cantidad, string subtotal, string iva,string total)
+        //{
+        //    String sql = "exec insert_venta " + fecha + "," + numero_documento + "," + id_producto + ",'" + nombre_producto + "'," + precio + "," + cantidad + "," + subtotal + "," + iva + "," + total + "";
+        //    DataTable dt = conexion.consulta(sql);
+        //    return dt;
+        //}
+
     }
 
 

@@ -240,39 +240,5 @@ namespace Dao
         {
             this.connection.Close();
         }
-
-        public bool Crud(string sql, string path, string usuario)
-        {
-            try
-            {
-                command = new SqlCommand(sql, this.connection);
-                int result = command.ExecuteNonQuery();
-                if (result > 0)
-                    return true;
-                else
-                    return false;
-            }
-            catch (SqlException sqlError)
-            {
-                Console.Write(sqlError);
-                return false;
-            }
-        }
-
-        public DataTable Select(string sql, string path, string usuario)
-        {
-            try
-            {
-                DataSet dataSet = new DataSet();
-                adapter = new SqlDataAdapter(sql, this.connection);
-                adapter.Fill(dataSet);
-                return dataSet.Tables[0];
-            }
-            catch (SqlException sqlError)
-            {
-                Console.Write(sqlError);
-                return null;
-            }
-        }
     }
 }
