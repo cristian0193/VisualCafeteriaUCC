@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using Control;
 using Dao;
 using System.Data.SqlClient;
+using Microsoft.VisualBasic;
 
 namespace Project_CafeteriaUCC
 {
@@ -42,6 +43,7 @@ namespace Project_CafeteriaUCC
         private void btn_registrar_producto_Click(object sender, EventArgs e)
         {
             double precio_producto = 0.0;
+            int codigo = 0;
 
             String categoria = Convert.ToString(this.combo_categoria.SelectedItem);
             String nombre_producto = Convert.ToString(this.combo_producto.SelectedItem);
@@ -49,13 +51,17 @@ namespace Project_CafeteriaUCC
             
             DataTable precio = new DataTable();
             precio = producto.ConsultarPrecio(nombre_producto,categoria);
-
             precio_producto = Convert.ToDouble((precio.Rows[0]["PRECIO"].ToString()));
+
+            DataTable codigo_producto = new DataTable();
+            codigo_producto = producto.ConsultarCodigoProducto(nombre_producto, categoria);
+            codigo = Convert.ToInt32((codigo_producto.Rows[0]["ID_PRODUCTO"].ToString()));
+
 
             double total = 0.0;
             total = precio_producto * cantidad;
 
-            grid_productos.Rows.Add(nombre_producto, cantidad, precio_producto, total);
+            grid_productos.Rows.Add(codigo, nombre_producto, cantidad, precio_producto, total);
 
             double subtotal = 0;
             double iva = 0;
@@ -78,6 +84,78 @@ namespace Project_CafeteriaUCC
             combo_categoria.SelectedIndex = -1;
             combo_producto.Items.Clear();
 
+
+        }
+
+        private void btn_guardar_Click(object sender, EventArgs e)
+        {
+
+            string identifica = "";
+            string nombre = "";
+            string apellido = "";
+            string id_product = "";
+            string nombre_producto = "";
+            string precio = "";
+            string cantidad = "";
+            string subtotal = "";
+            string iva = "";
+            string total = "";
+
+
+            string cedula = Interaction.InputBox("Ingrese Cedular del Cliente para Verificar si se encuentra en la Base de Datos", "Verificacion de Cliente", "");
+
+
+            daoUsuario usuario = new daoUsuario();
+            DataTable verificacion_usuario = new DataTable();
+            verificacion_usuario = usuario.ConsultaVerificacionUsuario(cedula);
+
+            if (verificacion_usuario.Rows.Count > 0)
+            {
+                identifica = Convert.ToString((verificacion_usuario.Rows[0]["NUMERO_DOCUMENTO"].ToString()));
+                nombre = Convert.ToString((verificacion_usuario.Rows[0]["NOMBRES"].ToString()));
+                apellido = Convert.ToString((verificacion_usuario.Rows[0]["APELLIDOS"].ToString()));
+
+                subtotal = Convert.ToString(txt_subtotal.Text);
+                iva = Convert.ToString(txt_iva.Text);
+                total = Convert.ToString(txt_total.Text);
+
+                foreach (DataGridViewRow row in grid_productos.Rows)
+                {
+                    id_product = Convert.ToString(row.Cells["TOTAL"].Value);
+                    nombre_producto = Convert.ToString(row.Cells["TOTAL"].Value);
+                    precio = Convert.ToString(row.Cells["TOTAL"].Value);
+                    cantidad = Convert.ToString(row.Cells["TOTAL"].Value);
+
+
+                }
+
+
+
+
+
+
+
+
+
+
+                string mensaje = string.Format(" MUCHAS GRACIAS POR SU COMPRA{0} Identificacion : {1}{0}Nombre : {2}{0}Apellido : {3}", Environment.NewLine, identifica, nombre, apellido);
+                MessageBox.Show(mensaje);
+
+
+
+
+            }
+            else
+            {
+                MessageBox.Show("USUARIO NO REGISTRADO POR FAVOR PROCESA A INGRESARLO");
+
+                FormularioUsuario user = new FormularioUsuario();
+                user.Show();
+            }
+
+
+
+            
 
         }
     }

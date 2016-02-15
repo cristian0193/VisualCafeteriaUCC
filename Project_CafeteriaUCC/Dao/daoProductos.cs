@@ -152,6 +152,13 @@ namespace Dao
             DataTable dt = conexion.consulta("exec cons_precio_producto '" + producto + "','"+ categoria  + "'");
             return dt;
         }
+
+        public DataTable ConsultarCodigoProducto(string producto, string categoria)
+        {
+            DataTable dt = conexion.consulta("exec cons_codigo_producto '" + producto + "','" + categoria + "'");
+            return dt;
+        }
+
     }
 
 

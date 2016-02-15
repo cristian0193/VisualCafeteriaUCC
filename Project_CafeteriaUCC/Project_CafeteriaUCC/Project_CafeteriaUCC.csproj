@@ -39,6 +39,7 @@
     <Reference Include="Dao">
       <HintPath>..\Dao\bin\Debug\Dao.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.VisualBasic" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -76,6 +77,12 @@
     <Compile Include="FormularioProducto.Designer.cs">
       <DependentUpon>FormularioProducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioUsuario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioUsuario.Designer.cs">
+      <DependentUpon>FormularioUsuario.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioVenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +102,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioProducto.resx">
       <DependentUpon>FormularioProducto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormularioUsuario.resx">
+      <DependentUpon>FormularioUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioVenta.resx">
       <DependentUpon>FormularioVenta.cs</DependentUpon>
