@@ -17,10 +17,28 @@ namespace Project_CafeteriaUCC
     public partial class FormularioVenta : Form
     {
         daoProductos producto = new daoProductos();
+        daoVenta venta = new daoVenta();
+        DataTable codigo_venta = new DataTable();
+
+        public int consecutivo = 0;
 
         public FormularioVenta()
         {
-            InitializeComponent();
+            InitializeComponent();            
+
+            codigo_venta = venta.ConsultaCodigoVenta();
+
+            if (codigo_venta.Rows.Count == 0)
+            {
+                txt_codigo_venta.Text = "1";
+            }
+            else
+            {
+               int codigo_vent = Convert.ToInt32((codigo_venta.Rows[0]["CODIGO_MAYOR"].ToString()));
+               consecutivo = codigo_vent + 1;
+               txt_codigo_venta.Text = Convert.ToString(consecutivo);
+            }
+
         }
 
         private void combo_categoria_SelectedIndexChanged(object sender, EventArgs e)
@@ -85,6 +103,7 @@ namespace Project_CafeteriaUCC
             combo_producto.Items.Clear();
 
 
+
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -129,13 +148,39 @@ namespace Project_CafeteriaUCC
                     precio = Convert.ToString(row.Cells["PRECIO"].Value);
                     cantidad = Convert.ToString(row.Cells["CO"].Value);
 
+                    double sumas_precio = Convert.ToDouble(precio);
+                    double sumas_cantidad = Convert.ToDouble(cantidad);
+                    double sumas_subtotal = sumas_precio * sumas_cantidad;
+                    double suma_iva = sumas_subtotal * 0.16;
+                    double suma_total = sumas_subtotal + suma_iva;
 
-                    productosComprados += venta.insertVenta(fecha, identifica, id_product, nombre_producto, precio, cantidad, subtotal, iva, total);
-
+                    productosComprados += venta.insertVenta(fecha, identifica, id_product, nombre_producto, precio, cantidad, sumas_subtotal, suma_iva, suma_total, consecutivo);
                 }
 
-                string mensaje = string.Format("MUCHAS GRACIAS POR SU COMPRA{0} Identificacion : {1}{0}Nombre : {2}{0}Apellido : {3}{0}Prodcutos Comprados : {4} ", Environment.NewLine, identifica, nombre, apellido, productosComprados);
+                txt_cantidad.Text = "";
+                combo_categoria.SelectedIndex = -1;
+                grid_productos.Rows.Clear();
+                grid_productos.Refresh();
+                txt_subtotal.Text = "";
+                txt_iva.Text = "";
+                txt_total.Text = "";
+
+                string mensaje = string.Format("MUCHAS GRACIAS POR SU COMPRA{0} Identificacion : {1}{0}Nombre : {2}{0}Apellido : {3}{0}Productos Comprados : {4} ", Environment.NewLine, identifica, nombre, apellido, productosComprados);
                 MessageBox.Show(mensaje);
+
+                codigo_venta = venta.ConsultaCodigoVenta();
+                this.Refresh();
+
+                if (codigo_venta.Rows.Count == 0)
+                {
+                    txt_codigo_venta.Text = "1";
+                }
+                else
+                {
+                    int codigo_vent = Convert.ToInt32((codigo_venta.Rows[0]["CODIGO_MAYOR"].ToString()));
+                    int consecutivo = codigo_vent + 1;
+                    txt_codigo_venta.Text = Convert.ToString(consecutivo);                    
+                }
 
             }
             else
@@ -145,11 +190,13 @@ namespace Project_CafeteriaUCC
                 FormularioUsuario user = new FormularioUsuario();
                 user.Show();
             }
+           
+        }
 
-
-
-            
-
+        private void btn_eliminar_Click(object sender, EventArgs e)
+        {
+            int fila = grid_productos.CurrentRow.Index;
+            grid_productos.Rows.RemoveAt(fila);
         }
     }
 }

@@ -22,5 +22,11 @@ namespace Project_CafeteriaUCC
             FormularioVenta venta = new FormularioVenta();
             venta.Show();
         }
+
+        private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioUsuario usuario = new FormularioUsuario();
+            usuario.Show();
+        }
     }
 }

@@ -46,7 +46,7 @@
             this.pAGOToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(753, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(1115, 24);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -65,6 +65,7 @@
             this.uSUARIOSToolStripMenuItem.Name = "uSUARIOSToolStripMenuItem";
             this.uSUARIOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.uSUARIOSToolStripMenuItem.Text = "USUARIOS";
+            this.uSUARIOSToolStripMenuItem.Click += new System.EventHandler(this.uSUARIOSToolStripMenuItem_Click);
             // 
             // pROVEEDORESToolStripMenuItem
             // 
@@ -90,13 +91,13 @@
             // fACTURAToolStripMenuItem
             // 
             this.fACTURAToolStripMenuItem.Name = "fACTURAToolStripMenuItem";
-            this.fACTURAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fACTURAToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.fACTURAToolStripMenuItem.Text = "FACTURA";
             // 
             // vENTAToolStripMenuItem
             // 
             this.vENTAToolStripMenuItem.Name = "vENTAToolStripMenuItem";
-            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
             this.vENTAToolStripMenuItem.Text = "VENTA";
             this.vENTAToolStripMenuItem.Click += new System.EventHandler(this.vENTAToolStripMenuItem_Click);
             // 
@@ -104,7 +105,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(753, 261);
+            this.ClientSize = new System.Drawing.Size(1115, 641);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioAdministrador";

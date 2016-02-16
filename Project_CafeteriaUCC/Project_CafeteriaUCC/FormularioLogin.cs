@@ -39,17 +39,14 @@ namespace Project_CafeteriaUCC
                         FormularioAdministrador frmMenu = new FormularioAdministrador();
                         frmMenu.Show();
 
-                        FormularioLogin frmLogin = new FormularioLogin();
-                        frmLogin.Visible = false;
-                        
+                        this.Hide();
                     }
                     else if (ctrlLogin.consultaSQLRoles(usuario, password).Equals("EMPLEADO"))
                     {
                         FormularioEmpleado frmMenu = new FormularioEmpleado();
                         frmMenu.Show();
 
-                        FormularioLogin frmLogin = new FormularioLogin();
-                        frmLogin.Visible = false;
+                        this.Hide();
                     }
                 }
                 else

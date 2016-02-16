@@ -51,6 +51,8 @@
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
             this.btn_imprimir = new System.Windows.Forms.Button();
+            this.lb_numero_venta = new System.Windows.Forms.Label();
+            this.txt_codigo_venta = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.grid_productos)).BeginInit();
@@ -145,6 +147,7 @@
             // 
             // grid_productos
             // 
+            this.grid_productos.AllowUserToAddRows = false;
             this.grid_productos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.grid_productos.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.CODIGO,
@@ -153,6 +156,7 @@
             this.PRECIO,
             this.TOTAL});
             this.grid_productos.Location = new System.Drawing.Point(257, 172);
+            this.grid_productos.MultiSelect = false;
             this.grid_productos.Name = "grid_productos";
             this.grid_productos.Size = new System.Drawing.Size(546, 212);
             this.grid_productos.TabIndex = 5;
@@ -262,6 +266,7 @@
             this.btn_eliminar.TabIndex = 12;
             this.btn_eliminar.Text = "ELIMINAR";
             this.btn_eliminar.UseVisualStyleBackColor = true;
+            this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
             // 
             // btn_imprimir
             // 
@@ -272,11 +277,36 @@
             this.btn_imprimir.Text = "IMPRIMIR";
             this.btn_imprimir.UseVisualStyleBackColor = true;
             // 
+            // lb_numero_venta
+            // 
+            this.lb_numero_venta.AutoSize = true;
+            this.lb_numero_venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_numero_venta.ForeColor = System.Drawing.Color.Red;
+            this.lb_numero_venta.Location = new System.Drawing.Point(636, 21);
+            this.lb_numero_venta.Name = "lb_numero_venta";
+            this.lb_numero_venta.Size = new System.Drawing.Size(30, 31);
+            this.lb_numero_venta.TabIndex = 14;
+            this.lb_numero_venta.Text = "#";
+            this.lb_numero_venta.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txt_codigo_venta
+            // 
+            this.txt_codigo_venta.Enabled = false;
+            this.txt_codigo_venta.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_codigo_venta.ForeColor = System.Drawing.Color.Red;
+            this.txt_codigo_venta.Location = new System.Drawing.Point(669, 18);
+            this.txt_codigo_venta.Name = "txt_codigo_venta";
+            this.txt_codigo_venta.Size = new System.Drawing.Size(134, 38);
+            this.txt_codigo_venta.TabIndex = 15;
+            this.txt_codigo_venta.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // FormularioVenta
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(815, 396);
+            this.Controls.Add(this.txt_codigo_venta);
+            this.Controls.Add(this.lb_numero_venta);
             this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_guardar);
@@ -327,5 +357,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn CO;
         private System.Windows.Forms.DataGridViewTextBoxColumn PROD;
         private System.Windows.Forms.DataGridViewTextBoxColumn CODIGO;
+        private System.Windows.Forms.Label lb_numero_venta;
+        private System.Windows.Forms.TextBox txt_codigo_venta;
     }
 }

@@ -19,8 +19,9 @@ namespace Modelo
         private double _SUBTOTAL;
         private double _IVA;
         private double _TOTAL;
+        private int _CODIGO_VENTA;
 
-   
+
         public modelVenta()
         {
             this._ID_VENTA = 0;
@@ -33,10 +34,11 @@ namespace Modelo
             this._SUBTOTAL = 0.0;
             this._IVA = 0.0;
             this._TOTAL = 0.0;
+            this._CODIGO_VENTA = 0;
 
         }
 
-        public modelVenta(String FECHA, String NUMERO_DOCUMENTO, String ID_PRODUCTO, String NOMBRE_PRODUCTO, String PRECIO,String CANTIDAD, Double SUBTOTAL, Double IVA, Double TOTAL)
+        public modelVenta(String FECHA, String NUMERO_DOCUMENTO, String ID_PRODUCTO, String NOMBRE_PRODUCTO, String PRECIO,String CANTIDAD, Double SUBTOTAL, Double IVA, Double TOTAL,int CODIGO_VENTA)
         {
             this._FECHA = FECHA;
             this._NUMERO_DOCUMENTO = NUMERO_DOCUMENTO;
@@ -47,6 +49,7 @@ namespace Modelo
             this._SUBTOTAL = SUBTOTAL;
             this._IVA = IVA;
             this._TOTAL = TOTAL;
+            this._CODIGO_VENTA = CODIGO_VENTA;
 
 
         }
@@ -105,6 +108,12 @@ namespace Modelo
         {
             get { return _TOTAL; }
             set { _TOTAL = value; }
+        }
+
+        public int CODIGO_VENTA
+        {
+            get { return _CODIGO_VENTA; }
+            set { _CODIGO_VENTA = value; }
         }
 
 
