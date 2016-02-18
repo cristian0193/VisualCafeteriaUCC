@@ -19,14 +19,21 @@ namespace Project_CafeteriaUCC
 
         private void vENTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormularioVenta venta = new FormularioVenta();
-            venta.Show();
+            
+            FormularioFacturas facturas = new FormularioFacturas();
+            facturas.Show();
         }
 
         private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormularioUsuario usuario = new FormularioUsuario();
+            FormularioUsuarios usuario = new FormularioUsuarios();
             usuario.Show();
+        }
+
+        private void fACTURAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioVenta venta = new FormularioVenta();
+            venta.Show();
         }
     }
 }

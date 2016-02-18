@@ -91,14 +91,15 @@
             // fACTURAToolStripMenuItem
             // 
             this.fACTURAToolStripMenuItem.Name = "fACTURAToolStripMenuItem";
-            this.fACTURAToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.fACTURAToolStripMenuItem.Text = "FACTURA";
+            this.fACTURAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fACTURAToolStripMenuItem.Text = "FACTURAS";
+            this.fACTURAToolStripMenuItem.Click += new System.EventHandler(this.fACTURAToolStripMenuItem_Click);
             // 
             // vENTAToolStripMenuItem
             // 
             this.vENTAToolStripMenuItem.Name = "vENTAToolStripMenuItem";
-            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
-            this.vENTAToolStripMenuItem.Text = "VENTA";
+            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vENTAToolStripMenuItem.Text = "VENTAS";
             this.vENTAToolStripMenuItem.Click += new System.EventHandler(this.vENTAToolStripMenuItem_Click);
             // 
             // FormularioAdministrador
