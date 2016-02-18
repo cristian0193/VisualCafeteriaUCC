@@ -7,44 +7,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using Dao;
-using Control;
-using System.IO;
 
 namespace Project_CafeteriaUCC
 {
-    public partial class FormularioUsuario : Form
+    public partial class FormularioUsuarios : Form
     {
-        public FormularioUsuario()
+        public FormularioUsuarios()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // Se crea el OpenFileDialog
-            OpenFileDialog dialog = new OpenFileDialog();
-            // Se muestra al usuario esperando una acción
-            DialogResult result = dialog.ShowDialog();
-
-            // Si seleccionó un archivo (asumiendo que es una imagen lo que seleccionó)
-            // la mostramos en el PictureBox de la inferfaz
-            if (result == DialogResult.OK)
-            {
-                caja_imagen.Image = Image.FromFile(dialog.FileName);
-            }
-
-        }
-
         private void btn_cargar_Click(object sender, EventArgs e)
         {
+
             try
             {
-                // Objetos de conexión y comando
-                //Data Source = (local); Initial Catalog = DBcafeteria; Integrated Security = SSPI
-                //System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(@"Data Source = ASUS\ASUS; Initial Catalog = DBcafeteria; Persist Security Info = False; User ID = sa; pwd = Colombia1 providerName=System.Data.SqlClient");
+                // Objetos de conexión y comando               
                 System.Data.SqlClient.SqlConnection conn = new System.Data.SqlClient.SqlConnection(@"Data Source=ASUS\ASUS;Initial Catalog=DBcafeteria;Integrated Security=SSPI");
-
                 System.Data.SqlClient.SqlCommand cmd = new System.Data.SqlClient.SqlCommand();
 
                 // Estableciento propiedades
@@ -90,8 +69,21 @@ namespace Project_CafeteriaUCC
             {
                 MessageBox.Show(ex.Message);
             }
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            // Se crea el OpenFileDialog
+            OpenFileDialog dialog = new OpenFileDialog();
+            // Se muestra al usuario esperando una acción
+            DialogResult result = dialog.ShowDialog();
 
+            // Si seleccionó un archivo (asumiendo que es una imagen lo que seleccionó)
+            // la mostramos en el PictureBox de la inferfaz
+            if (result == DialogResult.OK)
+            {
+                caja_imagen.Image = Image.FromFile(dialog.FileName);
+            }
         }
     }
 }
