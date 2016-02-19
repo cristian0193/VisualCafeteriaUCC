@@ -59,6 +59,12 @@
     <Compile Include="FormularioEmpleado.Designer.cs">
       <DependentUpon>FormularioEmpleado.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormularioEmpresa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormularioEmpresa.Designer.cs">
+      <DependentUpon>FormularioEmpresa.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormularioFacturas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -83,12 +89,6 @@
     <Compile Include="FormularioProducto.Designer.cs">
       <DependentUpon>FormularioProducto.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormularioUsuario.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormularioUsuario.Designer.cs">
-      <DependentUpon>FormularioUsuario.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormularioUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -106,6 +106,9 @@
     <EmbeddedResource Include="FormularioEmpleado.resx">
       <DependentUpon>FormularioEmpleado.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormularioEmpresa.resx">
+      <DependentUpon>FormularioEmpresa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormularioFacturas.resx">
       <DependentUpon>FormularioFacturas.cs</DependentUpon>
     </EmbeddedResource>
@@ -117,9 +120,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioProducto.resx">
       <DependentUpon>FormularioProducto.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormularioUsuario.resx">
-      <DependentUpon>FormularioUsuario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormularioUsuarios.resx">
       <DependentUpon>FormularioUsuarios.cs</DependentUpon>

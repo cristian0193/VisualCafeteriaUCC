@@ -187,7 +187,7 @@ namespace Project_CafeteriaUCC
             {
                 MessageBox.Show("USUARIO NO REGISTRADO POR FAVOR PROCESA A INGRESARLO");
 
-                FormularioUsuario user = new FormularioUsuario();
+                FormularioUsuarios user = new FormularioUsuarios();
                 user.Show();
             }
            

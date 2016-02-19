@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="modelLogin.cs" />
+    <Compile Include="modelEmpresa.cs" />
     <Compile Include="modelVenta.cs" />
     <Compile Include="modelProducto.cs" />
     <Compile Include="modelUsuario.cs" />

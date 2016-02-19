@@ -45,6 +45,26 @@ namespace Dao
             return dt;
         }
 
+        public DataTable ConsultaVenta(int codigo_venta)
+        {
+            DataTable dt = conexion.consulta("exec consulta_venta '" + codigo_venta + "'");
+            return dt;
+        }
+
+        public DataTable ConsultarSumaVentas(int codigo_venta)
+        {
+            DataTable dt = conexion.consulta("exec consulta_sumas_venta '" + codigo_venta + "'");
+            return dt;
+        }
+
+        public DataTable ConsultarVentaExistente(int codigo)
+        {
+            DataTable dt = conexion.consulta("exec consulta_venta_existe '" + codigo + "'");
+            return dt;
+        }
+
+        
+
     }
 
 }

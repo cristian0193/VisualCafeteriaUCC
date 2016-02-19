@@ -35,5 +35,11 @@ namespace Project_CafeteriaUCC
             FormularioVenta venta = new FormularioVenta();
             venta.Show();
         }
+
+        private void eMPRESAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioEmpresa empresa = new FormularioEmpresa();
+            empresa.Show();
+        }
     }
 }
