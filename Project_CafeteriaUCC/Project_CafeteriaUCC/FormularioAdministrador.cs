@@ -53,5 +53,12 @@ namespace Project_CafeteriaUCC
             proveedor.Show();
             
         }
+
+        private void pRODUCTOSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioProducto prodcuto = new FormularioProducto();
+            prodcuto.ShowDialog();
+            prodcuto.Show();
+        }
     }
 }

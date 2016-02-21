@@ -52,20 +52,13 @@ namespace Project_CafeteriaUCC
             int registros = 0;
 
             id_proveedor = Convert.ToInt32(txt_id_proveedor.Text);
-            nombre_asesor = Convert.ToString(txt_nombre_asesor.Text);
-            apellido_asesor = Convert.ToString(txt_apellido_asesor.Text);
-            nit_empresa = Convert.ToString(combo_nit_empresa.SelectedItem.ToString());
-            direccion = Convert.ToString(txt_direccion.Text);
-            telefono = Convert.ToString(txt_telefono.Text);
-            nombre_empresa = Convert.ToString(txt_nombre_empresa.Text);
-            productos = Convert.ToString(txt_productos.Text);
+
 
             daoProveedor proveedor = new daoProveedor();
             DataTable idproveedor = new DataTable();
 
             idproveedor = proveedor.ConsultarProveedor(id_proveedor);
             
-           
 
             if (idproveedor.Rows.Count > 0)
             {
@@ -73,6 +66,14 @@ namespace Project_CafeteriaUCC
             }
             else
             {
+                nombre_asesor = Convert.ToString(txt_nombre_asesor.Text);
+                apellido_asesor = Convert.ToString(txt_apellido_asesor.Text);
+                nit_empresa = Convert.ToString(combo_nit_empresa.SelectedItem.ToString());
+                direccion = Convert.ToString(txt_direccion.Text);
+                telefono = Convert.ToString(txt_telefono.Text);
+                nombre_empresa = Convert.ToString(txt_nombre_empresa.Text);
+                productos = Convert.ToString(txt_productos.Text);
+
                 registros = proveedor.insertProveedor(id_proveedor, nombre_asesor, apellido_asesor, nit_empresa, direccion, telefono, nombre_asesor, productos);
                 if (registros == 0)
                 {
