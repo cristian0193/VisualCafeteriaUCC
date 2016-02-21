@@ -141,5 +141,17 @@ namespace Dao
             DataTable dt = conexion.consulta("exec cons_verificacion_empresa '" + identificacion + "'");
             return dt;
         }
+
+        public DataTable ConsultaNombreEmpresa(string nit_empresa)
+        {
+            DataTable dt = conexion.consulta("exec consulta_nombre_empresa '" + nit_empresa + "'");
+            return dt;
+        }
+
+        public DataTable ConsultaNitEmpresa()
+        {
+            DataTable dt = conexion.consulta("exec consulta_nit_empresas");
+            return dt;
+        }
     }
 }

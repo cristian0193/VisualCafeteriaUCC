@@ -203,10 +203,10 @@
             this.combo_nit_empresa.Name = "combo_nit_empresa";
             this.combo_nit_empresa.Size = new System.Drawing.Size(166, 21);
             this.combo_nit_empresa.TabIndex = 75;
+            this.combo_nit_empresa.SelectedIndexChanged += new System.EventHandler(this.combo_nit_empresa_SelectedIndexChanged_1);
             // 
             // txt_nombre_empresa
             // 
-            this.txt_nombre_empresa.Enabled = false;
             this.txt_nombre_empresa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_nombre_empresa.Location = new System.Drawing.Point(137, 297);
             this.txt_nombre_empresa.Margin = new System.Windows.Forms.Padding(4);
@@ -247,7 +247,10 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_id_proveedor);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormularioProveedor";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormularioProveedor";
             this.ResumeLayout(false);
             this.PerformLayout();
