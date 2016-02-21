@@ -31,6 +31,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.pAGOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fACTURASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.vENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,7 +48,8 @@
             // pAGOSToolStripMenuItem
             // 
             this.pAGOSToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.fACTURASToolStripMenuItem});
+            this.fACTURASToolStripMenuItem,
+            this.vENTAToolStripMenuItem});
             this.pAGOSToolStripMenuItem.Name = "pAGOSToolStripMenuItem";
             this.pAGOSToolStripMenuItem.Size = new System.Drawing.Size(57, 20);
             this.pAGOSToolStripMenuItem.Text = "PAGOS";
@@ -55,8 +57,16 @@
             // fACTURASToolStripMenuItem
             // 
             this.fACTURASToolStripMenuItem.Name = "fACTURASToolStripMenuItem";
-            this.fACTURASToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.fACTURASToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.fACTURASToolStripMenuItem.Text = "FACTURAS";
+            this.fACTURASToolStripMenuItem.Click += new System.EventHandler(this.fACTURASToolStripMenuItem_Click);
+            // 
+            // vENTAToolStripMenuItem
+            // 
+            this.vENTAToolStripMenuItem.Name = "vENTAToolStripMenuItem";
+            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vENTAToolStripMenuItem.Text = "VENTA";
+            this.vENTAToolStripMenuItem.Click += new System.EventHandler(this.vENTAToolStripMenuItem_Click);
             // 
             // FormularioEmpleado
             // 
@@ -80,5 +90,6 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem pAGOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fACTURASToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem vENTAToolStripMenuItem;
     }
 }

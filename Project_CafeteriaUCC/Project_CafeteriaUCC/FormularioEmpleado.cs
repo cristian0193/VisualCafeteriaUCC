@@ -16,5 +16,17 @@ namespace Project_CafeteriaUCC
         {
             InitializeComponent();
         }
+
+        private void fACTURASToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioFacturas facturas = new FormularioFacturas();
+            facturas.Show();
+        }
+
+        private void vENTAToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioVenta venta = new FormularioVenta();
+            venta.Show();
+        }
     }
 }

@@ -87,7 +87,7 @@
             // 
             // btn_cargar
             // 
-            this.btn_cargar.Location = new System.Drawing.Point(136, 287);
+            this.btn_cargar.Location = new System.Drawing.Point(136, 260);
             this.btn_cargar.Margin = new System.Windows.Forms.Padding(4);
             this.btn_cargar.Name = "btn_cargar";
             this.btn_cargar.Size = new System.Drawing.Size(130, 32);
@@ -181,12 +181,12 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(18, 74);
+            this.label1.Location = new System.Drawing.Point(60, 74);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(116, 13);
+            this.label1.Size = new System.Drawing.Size(74, 13);
             this.label1.TabIndex = 40;
-            this.label1.Text = "Numero Identificacion :";
+            this.label1.Text = "NIT empresa :";
             // 
             // label9
             // 

@@ -19,9 +19,8 @@ namespace Project_CafeteriaUCC
 
         private void vENTAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
-            FormularioFacturas facturas = new FormularioFacturas();
-            facturas.Show();
+            FormularioVenta venta = new FormularioVenta();
+            venta.Show();
         }
 
         private void uSUARIOSToolStripMenuItem_Click(object sender, EventArgs e)
@@ -32,14 +31,20 @@ namespace Project_CafeteriaUCC
 
         private void fACTURAToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormularioVenta venta = new FormularioVenta();
-            venta.Show();
+            FormularioFacturas facturas = new FormularioFacturas();
+            facturas.Show();
         }
 
         private void eMPRESAToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FormularioEmpresa empresa = new FormularioEmpresa();
             empresa.Show();
+        }
+
+        private void pROVEEDORESToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioProveedor proveedor = new FormularioProveedor();
+            proveedor.Show();
         }
     }
 }

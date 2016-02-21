@@ -72,6 +72,7 @@
             this.pROVEEDORESToolStripMenuItem.Name = "pROVEEDORESToolStripMenuItem";
             this.pROVEEDORESToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.pROVEEDORESToolStripMenuItem.Text = "PROVEEDORES";
+            this.pROVEEDORESToolStripMenuItem.Click += new System.EventHandler(this.pROVEEDORESToolStripMenuItem_Click);
             // 
             // eMPRESAToolStripMenuItem
             // 
