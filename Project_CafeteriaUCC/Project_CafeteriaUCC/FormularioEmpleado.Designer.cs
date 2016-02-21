@@ -32,6 +32,7 @@
             this.pAGOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fACTURASToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,22 +58,33 @@
             // fACTURASToolStripMenuItem
             // 
             this.fACTURASToolStripMenuItem.Name = "fACTURASToolStripMenuItem";
-            this.fACTURASToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.fACTURASToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.fACTURASToolStripMenuItem.Text = "FACTURAS";
             this.fACTURASToolStripMenuItem.Click += new System.EventHandler(this.fACTURASToolStripMenuItem_Click);
             // 
             // vENTAToolStripMenuItem
             // 
             this.vENTAToolStripMenuItem.Name = "vENTAToolStripMenuItem";
-            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.vENTAToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.vENTAToolStripMenuItem.Text = "VENTA";
             this.vENTAToolStripMenuItem.Click += new System.EventHandler(this.vENTAToolStripMenuItem_Click);
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(967, 47);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 35);
+            this.button1.TabIndex = 2;
+            this.button1.Text = "CAMBIAR DE ROL";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormularioEmpleado
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 641);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioEmpleado";
@@ -91,5 +103,6 @@
         private System.Windows.Forms.ToolStripMenuItem pAGOSToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fACTURASToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vENTAToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }

@@ -33,10 +33,11 @@
             this.uSUARIOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pROVEEDORESToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eMPRESAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pRODUCTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pAGOToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.fACTURAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pRODUCTOSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.button1 = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,6 +84,13 @@
             this.eMPRESAToolStripMenuItem.Text = "EMPRESA";
             this.eMPRESAToolStripMenuItem.Click += new System.EventHandler(this.eMPRESAToolStripMenuItem_Click);
             // 
+            // pRODUCTOSToolStripMenuItem
+            // 
+            this.pRODUCTOSToolStripMenuItem.Name = "pRODUCTOSToolStripMenuItem";
+            this.pRODUCTOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.pRODUCTOSToolStripMenuItem.Text = "PRODUCTOS";
+            this.pRODUCTOSToolStripMenuItem.Click += new System.EventHandler(this.pRODUCTOSToolStripMenuItem_Click);
+            // 
             // pAGOToolStripMenuItem
             // 
             this.pAGOToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -106,18 +114,22 @@
             this.vENTAToolStripMenuItem.Text = "VENTAS";
             this.vENTAToolStripMenuItem.Click += new System.EventHandler(this.vENTAToolStripMenuItem_Click);
             // 
-            // pRODUCTOSToolStripMenuItem
+            // button1
             // 
-            this.pRODUCTOSToolStripMenuItem.Name = "pRODUCTOSToolStripMenuItem";
-            this.pRODUCTOSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.pRODUCTOSToolStripMenuItem.Text = "PRODUCTOS";
-            this.pRODUCTOSToolStripMenuItem.Click += new System.EventHandler(this.pRODUCTOSToolStripMenuItem_Click);
+            this.button1.Location = new System.Drawing.Point(969, 43);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(123, 35);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "CAMBIAR DE ROL";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormularioAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1115, 641);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "FormularioAdministrador";
@@ -141,5 +153,6 @@
         private System.Windows.Forms.ToolStripMenuItem fACTURAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem vENTAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pRODUCTOSToolStripMenuItem;
+        private System.Windows.Forms.Button button1;
     }
 }

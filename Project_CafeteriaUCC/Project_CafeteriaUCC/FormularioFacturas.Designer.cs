@@ -177,6 +177,8 @@
             this.Controls.Add(this.data_grid_producto);
             this.Controls.Add(this.txt_numero_factura);
             this.Controls.Add(this.label1);
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "FormularioFacturas";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormularioFacturas";

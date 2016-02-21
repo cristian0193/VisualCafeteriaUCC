@@ -28,5 +28,12 @@ namespace Project_CafeteriaUCC
             FormularioVenta venta = new FormularioVenta();
             venta.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormularioLogin login = new FormularioLogin();
+            login.Show();
+        }
     }
 }

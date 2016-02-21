@@ -11,8 +11,8 @@ namespace Dao
         //int insert(Object obj);
         //int update( String usuario, String password);
         //int delete(int id);
-        int ConsultaUsuario(int identificacion,String password);
-        string ConsultaRoles(int identificacion, String password);
+        int ConsultaUsuario(string identificacion,String password);
+        string ConsultaRoles(string identificacion, String password);
         //Object findById(int id);
     }
 }

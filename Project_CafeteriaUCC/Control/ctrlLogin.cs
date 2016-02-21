@@ -14,12 +14,12 @@ namespace Control
     public class ctrlLogin
     {
 
-        public static int consultaSQLUsuarios(int identificacion, String password)
+        public static int consultaSQLUsuarios(String identificacion, String password)
         {
             return new daoLogin().ConsultaUsuario(identificacion,password);
         }
 
-        public static string consultaSQLRoles(int identificacion, String password)
+        public static string consultaSQLRoles(String identificacion, String password)
         {
             return new daoLogin().ConsultaRoles(identificacion, password);
         }

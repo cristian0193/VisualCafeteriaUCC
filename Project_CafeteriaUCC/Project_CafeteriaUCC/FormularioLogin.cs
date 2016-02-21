@@ -21,11 +21,14 @@ namespace Project_CafeteriaUCC
         private void btn_aceptar_Click(object sender, EventArgs e)
         {
 
-            int usuario = Convert.ToInt32(this.txt_usuario.Text);
-            string password = Convert.ToString(this.txt_contrasena.Text);
+            string usuario = "";
+            string password = "";
+
+            usuario = Convert.ToString(txt_usuario.Text);
+            password = Convert.ToString(txt_contrasena.Text);
 
 
-            if (usuario.Equals("") || password.Equals(""))
+            if (usuario == "" || password.Equals(""))
             {
                 MessageBox.Show("INGRESE USUARIO O CONTRASEÑA");
             }
@@ -53,10 +56,12 @@ namespace Project_CafeteriaUCC
                 {
                     MessageBox.Show("USUARIO NO EXISTE EN BASE DE DATOS:");
                 }
-            }
+            }           
+        }
 
-
-           
+        private void btn_cancelar_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

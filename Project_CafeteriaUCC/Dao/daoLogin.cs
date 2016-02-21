@@ -18,7 +18,7 @@ namespace Dao
         public string roles = "";
 
 
-        public int ConsultaUsuario(int usuario, string password)
+        public int ConsultaUsuario(string usuario, string password)
         {
             try
             {
@@ -41,7 +41,7 @@ namespace Dao
             }
         }
 
-        public string ConsultaRoles(int usuario, string password)
+        public string ConsultaRoles(string usuario, string password)
         {
             try
             {

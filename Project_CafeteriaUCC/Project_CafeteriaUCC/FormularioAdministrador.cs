@@ -60,5 +60,12 @@ namespace Project_CafeteriaUCC
             prodcuto.ShowDialog();
             prodcuto.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            FormularioLogin login = new FormularioLogin();
+            login.Show();
+        }
     }
 }
