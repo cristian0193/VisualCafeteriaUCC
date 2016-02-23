@@ -40,6 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.txt_totales = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.data_grid_producto)).BeginInit();
             this.SuspendLayout();
             // 
@@ -73,7 +74,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(397, 35);
+            this.button1.Location = new System.Drawing.Point(413, 35);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 26);
             this.button1.TabIndex = 3;
@@ -83,6 +84,7 @@
             // 
             // txt_cliente
             // 
+            this.txt_cliente.Enabled = false;
             this.txt_cliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_cliente.ForeColor = System.Drawing.Color.Red;
             this.txt_cliente.Location = new System.Drawing.Point(774, 149);
@@ -160,11 +162,23 @@
             this.label5.TabIndex = 10;
             this.label5.Text = "Total : ";
             // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.Red;
+            this.label9.Location = new System.Drawing.Point(380, 39);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(27, 18);
+            this.label9.TabIndex = 46;
+            this.label9.Text = "(*)";
+            // 
             // FormularioFacturas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(990, 476);
+            this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_totales);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txt_iva);
@@ -202,5 +216,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_totales;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label9;
     }
 }

@@ -30,7 +30,7 @@
         {
             this.txt_email = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
-            this.txtx_casa = new System.Windows.Forms.TextBox();
+            this.txt_telefono = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.btn_cargar = new System.Windows.Forms.Button();
             this.txt_direccion = new System.Windows.Forms.TextBox();
@@ -43,6 +43,10 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caja_imagen)).BeginInit();
             this.SuspendLayout();
@@ -66,14 +70,14 @@
             this.label7.TabIndex = 55;
             this.label7.Text = "Email :";
             // 
-            // txtx_casa
+            // txt_telefono
             // 
-            this.txtx_casa.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtx_casa.Location = new System.Drawing.Point(137, 183);
-            this.txtx_casa.Margin = new System.Windows.Forms.Padding(4);
-            this.txtx_casa.Name = "txtx_casa";
-            this.txtx_casa.Size = new System.Drawing.Size(129, 21);
-            this.txtx_casa.TabIndex = 51;
+            this.txt_telefono.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_telefono.Location = new System.Drawing.Point(137, 183);
+            this.txt_telefono.Margin = new System.Windows.Forms.Padding(4);
+            this.txt_telefono.Name = "txt_telefono";
+            this.txt_telefono.Size = new System.Drawing.Size(129, 21);
+            this.txt_telefono.TabIndex = 51;
             // 
             // label5
             // 
@@ -146,6 +150,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.label10);
             this.groupBox1.Controls.Add(this.caja_imagen);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(615, 70);
@@ -199,15 +204,62 @@
             this.label9.TabIndex = 58;
             this.label9.Text = "REGISTRO DE EMPRESA";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(305, 70);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(27, 18);
+            this.label3.TabIndex = 59;
+            this.label3.Text = "(*)";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Red;
+            this.label6.Location = new System.Drawing.Point(581, 112);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(27, 18);
+            this.label6.TabIndex = 60;
+            this.label6.Text = "(*)";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.Red;
+            this.label8.Location = new System.Drawing.Point(581, 146);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(27, 18);
+            this.label8.TabIndex = 61;
+            this.label8.Text = "(*)";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.ForeColor = System.Drawing.Color.Red;
+            this.label10.Location = new System.Drawing.Point(20, 226);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(27, 18);
+            this.label10.TabIndex = 62;
+            this.label10.Text = "(*)";
+            // 
             // FormularioEmpresa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 349);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.txt_email);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.txtx_casa);
+            this.Controls.Add(this.txt_telefono);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btn_cargar);
             this.Controls.Add(this.txt_direccion);
@@ -224,6 +276,7 @@
             this.Text = "FormularioEmpresa";
             this.Load += new System.EventHandler(this.FormularioEmpresa_Load);
             this.groupBox1.ResumeLayout(false);
+            this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.caja_imagen)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -233,7 +286,7 @@
         #endregion
         private System.Windows.Forms.TextBox txt_email;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.TextBox txtx_casa;
+        private System.Windows.Forms.TextBox txt_telefono;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_cargar;
         private System.Windows.Forms.TextBox txt_direccion;
@@ -246,5 +299,9 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label8;
     }
 }

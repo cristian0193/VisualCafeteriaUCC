@@ -18,7 +18,7 @@ namespace Dao
     {
         private ConexionBD conexion = new ConexionBD();
 
-        public int insertProveedor(int id_proveedor, String nombre_asesor, String apellido_asesor, String nit_empresa, String direccion, String telefono, String nombre_empresa, String producto_ofrece)
+        public int insertProveedor(String id_proveedor, String nombre_asesor, String apellido_asesor, String nit_empresa, String direccion, String telefono, String nombre_empresa, String producto_ofrece)
         {
             try
             {
@@ -136,7 +136,7 @@ namespace Dao
             }
         }
         
-        public DataTable ConsultarProveedor(int id_proveedor)
+        public DataTable ConsultarProveedor(string id_proveedor)
         {
             DataTable dt = conexion.consulta("exec consulta_proveedor '" + id_proveedor + "'");
             return dt;

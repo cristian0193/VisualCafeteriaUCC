@@ -39,9 +39,7 @@ namespace Project_CafeteriaUCC
 
         private void btn_cargar_Click(object sender, EventArgs e)
         {
-
-
-            int id_proveedor = 0;
+            string id_proveedor = "";
             string nombre_asesor = "";
             string apellido_asesor = "";
             string nit_empresa = "";
@@ -51,39 +49,64 @@ namespace Project_CafeteriaUCC
             string productos = "";
             int registros = 0;
 
-            id_proveedor = Convert.ToInt32(txt_id_proveedor.Text);
+            id_proveedor = txt_id_proveedor.Text;
 
 
             daoProveedor proveedor = new daoProveedor();
             DataTable idproveedor = new DataTable();
 
             idproveedor = proveedor.ConsultarProveedor(id_proveedor);
-            
 
-            if (idproveedor.Rows.Count > 0)
+            if (!txt_id_proveedor.Text.Equals("") && !txt_nombre_asesor.Text.Equals("") && !txt_apellido_asesor.Text.Equals("") && !txt_productos.Text.Equals("") && !combo_nit_empresa.SelectedIndex.Equals(-1))
             {
-                MessageBox.Show("El Proveedro ya se encuentra Registrado");
-            }
-            else
-            {
-                nombre_asesor = Convert.ToString(txt_nombre_asesor.Text);
-                apellido_asesor = Convert.ToString(txt_apellido_asesor.Text);
-                nit_empresa = Convert.ToString(combo_nit_empresa.SelectedItem.ToString());
-                direccion = Convert.ToString(txt_direccion.Text);
-                telefono = Convert.ToString(txt_telefono.Text);
-                nombre_empresa = Convert.ToString(txt_nombre_empresa.Text);
-                productos = Convert.ToString(txt_productos.Text);
-
-                registros = proveedor.insertProveedor(id_proveedor, nombre_asesor, apellido_asesor, nit_empresa, direccion, telefono, nombre_asesor, productos);
-                if (registros == 0)
+                if (idproveedor.Rows.Count > 0)
                 {
-                    MessageBox.Show("No Se Ingreso proveedor");
+                    MessageBox.Show("El Proveedro ya se encuentra Registrado");
                 }
                 else
                 {
-                    MessageBox.Show("Se Ingreso proveedor Correctamente");
+                    nombre_asesor = Convert.ToString(txt_nombre_asesor.Text);
+                    apellido_asesor = Convert.ToString(txt_apellido_asesor.Text);
+                    nit_empresa = Convert.ToString(combo_nit_empresa.SelectedItem.ToString());
+                    direccion = Convert.ToString(txt_direccion.Text);
+                    telefono = Convert.ToString(txt_telefono.Text);
+                    nombre_empresa = Convert.ToString(txt_nombre_empresa.Text);
+                    productos = Convert.ToString(txt_productos.Text);
+
+                    registros = proveedor.insertProveedor(id_proveedor, nombre_asesor, apellido_asesor, nit_empresa, direccion, telefono, nombre_asesor, productos);
+                    if (registros == 0)
+                    {
+                        MessageBox.Show("No Se Ingreso proveedor");
+                    }
+                    else
+                    {
+                        MessageBox.Show("Se Ingreso proveedor Correctamente");
+
+                        txt_id_proveedor.Text = "";
+                        txt_nombre_asesor.Text = "";
+                        txt_apellido_asesor.Text = "";
+                        txt_direccion.Text = "";
+                        txt_telefono.Text = "";
+                        txt_nombre_empresa.Text = "";
+                        txt_productos.Text = "";
+                        combo_nit_empresa.SelectedIndex.Equals(-1);
+                    }
                 }
             }
+            else
+            {
+                MessageBox.Show("Ingrese los Datos correctamente con (*)");
+            }
+
+
+
+
+
+
+           
+            
+
+            
 
         }
 

@@ -39,7 +39,7 @@ namespace Dao
             }
         }
 
-        public int update(int identificacion, String nombre, String categoria, double precio, int cantidad)
+        public int update(String identificacion, String nombre, String categoria, double precio, int cantidad)
         {
             try
             {
@@ -159,7 +159,7 @@ namespace Dao
             return dt;
         }
 
-        public DataTable ConsultarProduto(int codigo)
+        public DataTable ConsultarProduto(string codigo)
         {
             DataTable dt = conexion.consulta("exec consultar_producto '" + codigo + "'");
             return dt;

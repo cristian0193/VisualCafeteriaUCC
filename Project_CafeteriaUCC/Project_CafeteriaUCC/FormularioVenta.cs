@@ -60,50 +60,16 @@ namespace Project_CafeteriaUCC
 
         private void btn_registrar_producto_Click(object sender, EventArgs e)
         {
-            double precio_producto = 0.0;
-            int codigo = 0;
 
-            String categoria = Convert.ToString(this.combo_categoria.SelectedItem);
-            String nombre_producto = Convert.ToString(this.combo_producto.SelectedItem);
-            int cantidad = Convert.ToInt32(this.txt_cantidad.Text);
-            
-            DataTable precio = new DataTable();
-            precio = producto.ConsultarPrecio(nombre_producto,categoria);
-            precio_producto = Convert.ToDouble((precio.Rows[0]["PRECIO"].ToString()));
-
-            DataTable codigo_producto = new DataTable();
-            codigo_producto = producto.ConsultarCodigoProducto(nombre_producto, categoria);
-            codigo = Convert.ToInt32((codigo_producto.Rows[0]["ID_PRODUCTO"].ToString()));
-
-
-            double total = 0.0;
-            total = precio_producto * cantidad;
-
-            grid_productos.Rows.Add(codigo, nombre_producto, cantidad, precio_producto, total);
-
-            double subtotal = 0;
-            double iva = 0;
-            double totaApagar = 0;
-
-            foreach (DataGridViewRow row in grid_productos.Rows)
+            if (combo_categoria.SelectedIndex.Equals(-1)|| combo_producto.SelectedIndex.Equals(-1) || txt_cantidad.Text.Equals(""))
             {
-                subtotal += Convert.ToDouble(row.Cells["TOTAL"].Value);
+                MessageBox.Show("INGRESE LOS DATOS CORRECTAMENTE");
             }
-
-            txt_subtotal.Text = Convert.ToString(subtotal);
-
-            iva = subtotal * 0.16;
-            txt_iva.Text = Convert.ToString(iva);
-
-            totaApagar = subtotal + iva;
-            txt_total.Text = Convert.ToString(totaApagar);
-
-            txt_cantidad.Text = "";
-            combo_categoria.SelectedIndex = -1;
-            combo_producto.Items.Clear();
-
-
-
+            else
+            {
+                CalcularValorTotal();
+            }
+        
         }
 
         private void btn_guardar_Click(object sender, EventArgs e)
@@ -181,12 +147,10 @@ namespace Project_CafeteriaUCC
                     int consecutivo = codigo_vent + 1;
                     txt_codigo_venta.Text = Convert.ToString(consecutivo);                    
                 }
-
             }
             else
             {
                 MessageBox.Show("USUARIO NO REGISTRADO POR FAVOR PROCESA A INGRESARLO");
-
                 FormularioUsuarios user = new FormularioUsuarios();
                 user.Show();
             }
@@ -197,6 +161,83 @@ namespace Project_CafeteriaUCC
         {
             int fila = grid_productos.CurrentRow.Index;
             grid_productos.Rows.RemoveAt(fila);
+
+            RecalcularValorTotal();
+        }
+
+        private void btn_imprimir_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        public void CalcularValorTotal()
+        {
+            double precio_producto = 0.0;
+            int codigo = 0;
+
+            String categoria = Convert.ToString(this.combo_categoria.SelectedItem);
+            String nombre_producto = Convert.ToString(this.combo_producto.SelectedItem);
+            int cantidad = Convert.ToInt32(this.txt_cantidad.Text);
+
+            DataTable precio = new DataTable();
+            precio = producto.ConsultarPrecio(nombre_producto, categoria);
+            precio_producto = Convert.ToDouble((precio.Rows[0]["PRECIO"].ToString()));
+
+            DataTable codigo_producto = new DataTable();
+            codigo_producto = producto.ConsultarCodigoProducto(nombre_producto, categoria);
+            codigo = Convert.ToInt32((codigo_producto.Rows[0]["ID_PRODUCTO"].ToString()));
+
+
+            double total = 0.0;
+            total = precio_producto * cantidad;
+
+            grid_productos.Rows.Add(codigo, nombre_producto, cantidad, precio_producto, total);
+
+            double subtotal = 0;
+            double iva = 0;
+            double totaApagar = 0;
+
+            foreach (DataGridViewRow row in grid_productos.Rows)
+            {
+                subtotal += Convert.ToDouble(row.Cells["TOTAL"].Value);
+            }
+
+            txt_subtotal.Text = Convert.ToString(subtotal);
+
+            iva = subtotal * 0.16;
+            txt_iva.Text = Convert.ToString(iva);
+
+            totaApagar = subtotal + iva;
+            txt_total.Text = Convert.ToString(totaApagar);
+
+            txt_cantidad.Text = "";
+            combo_categoria.SelectedIndex = -1;
+            combo_producto.Items.Clear();
+        }
+
+        public void RecalcularValorTotal()
+        {
+
+            double subtotal = 0;
+            double iva = 0;
+            double totaApagar = 0;
+
+            foreach (DataGridViewRow row in grid_productos.Rows)
+            {
+                subtotal += Convert.ToDouble(row.Cells["TOTAL"].Value);
+            }
+
+            txt_subtotal.Text = Convert.ToString(subtotal);
+
+            iva = subtotal * 0.16;
+            txt_iva.Text = Convert.ToString(iva);
+
+            totaApagar = subtotal + iva;
+            txt_total.Text = Convert.ToString(totaApagar);
+
+            txt_cantidad.Text = "";
+            combo_categoria.SelectedIndex = -1;
+            combo_producto.Items.Clear();
         }
     }
 }

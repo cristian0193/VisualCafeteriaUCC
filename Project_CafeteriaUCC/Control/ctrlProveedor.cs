@@ -13,7 +13,7 @@ namespace Control
 {
     public class ctrlProveedor
     {
-        public static int insertProveedor(int id_proveedor, String nombre_asesor, String apellido_asesor, String nit_empresa, String direccion, String telefono, String nombre_empresa, String producto_ofrece)
+        public static int insertProveedor(string id_proveedor, String nombre_asesor, String apellido_asesor, String nit_empresa, String direccion, String telefono, String nombre_empresa, String producto_ofrece)
         {
             return new daoProveedor().insertProveedor(id_proveedor, nombre_asesor, apellido_asesor, nit_empresa, direccion, telefono, nombre_empresa, producto_ofrece);
         }

@@ -9,7 +9,6 @@ namespace Modelo
     public class modelVenta
     {
 
-        private int _ID_VENTA;
         private string _FECHA;
         private string _NUMERO_DOCUMENTO;
         private string _ID_PRODUCTO;
@@ -24,7 +23,6 @@ namespace Modelo
 
         public modelVenta()
         {
-            this._ID_VENTA = 0;
             this._FECHA = "GETDATE()";
             this._NUMERO_DOCUMENTO = "";
             this._ID_PRODUCTO = "";

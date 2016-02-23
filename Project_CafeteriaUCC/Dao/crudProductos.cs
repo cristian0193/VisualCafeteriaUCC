@@ -9,7 +9,7 @@ namespace Dao
     public interface crudProductos
     {
         int insert(Object obj);
-        int update(int identificacion, String nombre, String categoria , Double precio, int cantidad);
+        int update(String identificacion, String nombre, String categoria , Double precio, int cantidad);
         int delete(int id);
     }
 }

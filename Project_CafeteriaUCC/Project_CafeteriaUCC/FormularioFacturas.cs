@@ -22,7 +22,9 @@ namespace Project_CafeteriaUCC
 
         private void button1_Click(object sender, EventArgs e)
         {
-            int codigo = Convert.ToInt32(this.txt_numero_factura.Text);
+
+            string codigo = "";
+            codigo = txt_numero_factura.Text;
 
             daoVenta venta = new daoVenta();
             DataTable consultarFacturaExistente = new DataTable();

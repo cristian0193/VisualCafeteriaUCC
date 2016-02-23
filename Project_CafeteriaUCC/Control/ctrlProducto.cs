@@ -13,7 +13,7 @@ namespace Control
 {
     public class ctrlProducto
     {
-        public static int insert(int id_codigo,string nombre_producto,string categoria,double precio, int cantidad)
+        public static int insert(string id_codigo,string nombre_producto,string categoria,double precio, int cantidad)
         {
             return new daoProductos().insert(new modelProducto(id_codigo,nombre_producto,categoria,precio,cantidad));
         }

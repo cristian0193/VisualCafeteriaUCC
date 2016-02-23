@@ -50,7 +50,6 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btn_guardar = new System.Windows.Forms.Button();
             this.btn_eliminar = new System.Windows.Forms.Button();
-            this.btn_imprimir = new System.Windows.Forms.Button();
             this.lb_numero_venta = new System.Windows.Forms.Label();
             this.txt_codigo_venta = new System.Windows.Forms.TextBox();
             this.groupBox1.SuspendLayout();
@@ -260,22 +259,13 @@
             // 
             // btn_eliminar
             // 
-            this.btn_eliminar.Location = new System.Drawing.Point(78, 343);
+            this.btn_eliminar.Location = new System.Drawing.Point(135, 296);
             this.btn_eliminar.Name = "btn_eliminar";
             this.btn_eliminar.Size = new System.Drawing.Size(91, 41);
             this.btn_eliminar.TabIndex = 12;
             this.btn_eliminar.Text = "ELIMINAR";
             this.btn_eliminar.UseVisualStyleBackColor = true;
             this.btn_eliminar.Click += new System.EventHandler(this.btn_eliminar_Click);
-            // 
-            // btn_imprimir
-            // 
-            this.btn_imprimir.Location = new System.Drawing.Point(135, 296);
-            this.btn_imprimir.Name = "btn_imprimir";
-            this.btn_imprimir.Size = new System.Drawing.Size(91, 41);
-            this.btn_imprimir.TabIndex = 13;
-            this.btn_imprimir.Text = "IMPRIMIR";
-            this.btn_imprimir.UseVisualStyleBackColor = true;
             // 
             // lb_numero_venta
             // 
@@ -307,7 +297,6 @@
             this.ClientSize = new System.Drawing.Size(815, 396);
             this.Controls.Add(this.txt_codigo_venta);
             this.Controls.Add(this.lb_numero_venta);
-            this.Controls.Add(this.btn_imprimir);
             this.Controls.Add(this.btn_eliminar);
             this.Controls.Add(this.btn_guardar);
             this.Controls.Add(this.txt_total);
@@ -352,7 +341,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_guardar;
         private System.Windows.Forms.Button btn_eliminar;
-        private System.Windows.Forms.Button btn_imprimir;
         private System.Windows.Forms.Button btn_registrar_producto;
         private System.Windows.Forms.DataGridViewTextBoxColumn TOTAL;
         private System.Windows.Forms.DataGridViewTextBoxColumn PRECIO;

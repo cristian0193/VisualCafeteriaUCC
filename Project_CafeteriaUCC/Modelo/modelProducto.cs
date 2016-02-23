@@ -8,7 +8,7 @@ namespace Modelo
 {
     public class modelProducto
     {
-        private int _ID_PRODUCTO;
+        private String _ID_PRODUCTO;
         private String _NOMBRE_PRODUCTO;
         private String _CATEGORIA;
         private Double _PRECIO;
@@ -16,7 +16,7 @@ namespace Modelo
 
         public modelProducto()
         {
-            this._ID_PRODUCTO = 0;
+            this._ID_PRODUCTO = "";
             this._NOMBRE_PRODUCTO = "";
             this._CATEGORIA = "";
             this._PRECIO = 0.0;
@@ -24,7 +24,7 @@ namespace Modelo
 
         }
 
-        public modelProducto(int ID_NUMERO_DOCUMENT, String NOMBRE, String CATEGORIA, Double PRECIO, int CANTIDAD)
+        public modelProducto(String ID_NUMERO_DOCUMENT, String NOMBRE, String CATEGORIA, Double PRECIO, int CANTIDAD)
         {
             this._ID_PRODUCTO = ID_NUMERO_DOCUMENT;
             this._NOMBRE_PRODUCTO = NOMBRE.ToUpper();
@@ -33,7 +33,7 @@ namespace Modelo
             this._CANTIDAD = CANTIDAD;
         }
 
-        public int ID_PRODUCTO
+        public String ID_PRODUCTO
         {
             get { return _ID_PRODUCTO; }
             set { _ID_PRODUCTO = value; }
