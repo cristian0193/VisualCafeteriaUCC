@@ -67,5 +67,12 @@ namespace Project_CafeteriaUCC
             FormularioLogin login = new FormularioLogin();
             login.Show();
         }
+
+        private void nUEVOUSERSToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormularioUsuariosAplicacion users = new FormularioUsuariosAplicacion();
+            users.ShowDialog();
+            users.Show();
+        }
     }
 }

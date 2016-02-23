@@ -63,5 +63,11 @@ namespace Project_CafeteriaUCC
         {
             Application.Exit();
         }
+
+        private void lb_nuevo_usuario_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            FormularioUsuariosAplicacion user = new FormularioUsuariosAplicacion();
+            user.ShowDialog();
+        }
     }
 }

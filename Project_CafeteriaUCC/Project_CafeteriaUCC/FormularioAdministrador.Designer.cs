@@ -38,6 +38,7 @@
             this.fACTURAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vENTAToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button1 = new System.Windows.Forms.Button();
+            this.nUEVOUSERSToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,7 +59,8 @@
             this.uSUARIOSToolStripMenuItem,
             this.pROVEEDORESToolStripMenuItem,
             this.eMPRESAToolStripMenuItem,
-            this.pRODUCTOSToolStripMenuItem});
+            this.pRODUCTOSToolStripMenuItem,
+            this.nUEVOUSERSToolStripMenuItem});
             this.aDMINISTRADORToolStripMenuItem.Name = "aDMINISTRADORToolStripMenuItem";
             this.aDMINISTRADORToolStripMenuItem.Size = new System.Drawing.Size(113, 20);
             this.aDMINISTRADORToolStripMenuItem.Text = "ADMINISTRADOR";
@@ -124,6 +126,13 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // nUEVOUSERSToolStripMenuItem
+            // 
+            this.nUEVOUSERSToolStripMenuItem.Name = "nUEVOUSERSToolStripMenuItem";
+            this.nUEVOUSERSToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.nUEVOUSERSToolStripMenuItem.Text = "NUEVO USERS";
+            this.nUEVOUSERSToolStripMenuItem.Click += new System.EventHandler(this.nUEVOUSERSToolStripMenuItem_Click);
+            // 
             // FormularioAdministrador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -132,6 +141,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.MaximizeBox = false;
             this.Name = "FormularioAdministrador";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Menu";
@@ -154,5 +164,6 @@
         private System.Windows.Forms.ToolStripMenuItem vENTAToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pRODUCTOSToolStripMenuItem;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ToolStripMenuItem nUEVOUSERSToolStripMenuItem;
     }
 }
