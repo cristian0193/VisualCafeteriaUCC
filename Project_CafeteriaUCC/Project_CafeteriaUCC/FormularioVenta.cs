@@ -28,7 +28,10 @@ namespace Project_CafeteriaUCC
 
             codigo_venta = venta.ConsultaCodigoVenta();
 
-            if (codigo_venta.Rows.Count == 0)
+            //string cadena = codigo_venta.Rows[0]["CODIGO_MAYOR"].ToString();
+
+
+            if (codigo_venta.Rows.Count == 0 )
             {
                 txt_codigo_venta.Text = "1";
             }
